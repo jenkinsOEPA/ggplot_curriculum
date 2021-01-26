@@ -1,6 +1,8 @@
 ---
 title: "Data Visualization and ggplot Introduction"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 ggplot2 is a package that is part of the tidyverse.Tidyverse is a collection of R packages designed for data science that share an underlying design philosphy, grammar, and data structures.
@@ -9,7 +11,30 @@ ggplot2 is a package that is part of the tidyverse.Tidyverse is a collection of 
 ![Packages included in tidyverse](img/tidyverse.png){width=30%}
 </center>
 
+## Overview
+
+ggplot2 is a system for declaratively creating graphics. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.
+
+
+### Installation
+```{r eval = FALSE, echo = TRUE}
+# The easiest way to get ggplot2 is to install the whole tidyverse:
+install.packages("tidyverse")
+
+# Alternatively, install just ggplot2:
+install.packages("ggplot2")
+
+# Or the development version from GitHub:
+# install.packages("devtools")
+devtools::install_github("tidyverse/ggplot2")
+
+```
+
 ```{r}
-plot(cars)
+library(ggplot2)
+
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+
 ```
 
