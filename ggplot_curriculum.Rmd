@@ -30,11 +30,24 @@ devtools::install_github("tidyverse/ggplot2")
 
 ```
 
-```{r}
+### Usage
+It’s hard to succinctly describe how ggplot2 works because it embodies a deep philosophy of visualisation. However, in most cases you start with [`ggplot()`](https://ggplot2.tidyverse.org/reference/ggplot.html), supply a dataset and aesthetic mapping (with [`aes()`](https://ggplot2.tidyverse.org/reference/aes.html)). You then add on layers (like [`geom_point()`](https://ggplot2.tidyverse.org/reference/geom_point.html) or [`geom_histogram()`](https://ggplot2.tidyverse.org/reference/geom_freqpoly.html)), scales (like [`scale_colour_brewer()`](https://ggplot2.tidyverse.org/reference/scale_colour_brewer.html)), faceting specifications (like [`facet_wrap()`](https://ggplot2.tidyverse.org/reference/facet_wrap.html)) and coordinate systems (like [`coord_flip()`](https://ggplot2.tidyverse.org/reference/coord_flip.html)).
+
+
+```{r echo = TRUE}
+# Load package to workspace
 library(ggplot2)
 
-ggplot(mpg, aes(displ, hwy, colour = class)) + 
-  geom_point()
+# Initialize a ggplot object
+ggplot(data = mpg,    # data source (mpg is a built in dataset for training)
+      # Aesthetic mapping
+       mapping = aes(x = displ, # x coordinate
+           y = hwy,   # y coordinate
+           colour = class # color based on class variable
+           )
+       ) +
+# scatter plot, this takes the info used in the ggplot object and maps the information to an x-y scatter plot
+geom_point()
 
 ```
 
