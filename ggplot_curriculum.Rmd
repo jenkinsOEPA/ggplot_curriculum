@@ -9,4 +9,7 @@ ggplot2 is a package that is part of the tidyverse.Tidyverse is a collection of 
 ![Packages included in tidyverse](img/tidyverse.png){width=30%}
 </center>
 
+```{r}
+plot(cars)
+```
 
