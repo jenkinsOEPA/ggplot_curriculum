@@ -51,3 +51,39 @@ geom_point()
 
 ```
 
+## Outline
+1. 4 C's of Data Visualization
+  + Clear - easily seen; sharply defined
+  + Clean - thorough; comlplete; unadulterated
+  + Concise - brief but comprehensive
+  + Captivating - to attract and hold by beauty or excellence
+
+2. ggplot2 Overview
+  + Explore and Explain
+  + Data format for different plots
+  + Grammar of Graphics
+  + Basics components
+    + Aesthetics
+    + Geometries
+    + Layers (Seven of them)
+3. Aesthetics
+  + What they are and how they impact the visualization
+  + Color, Shape, Size
+  + Color vs. Fill
+  + Categorical vs Contiuous Data
+  + Attributes
+  + Best Practices
+4. Geometries
+  + Scatter plots
+  + Histograms
+  + Bar plots
+  + Box plots
+  + Line plots
+  + Time series
+5. Themes
+  + Using themes
+  + Creating custom themes
+6. Next Steps and Resources
+  
+
+
